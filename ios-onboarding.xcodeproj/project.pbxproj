@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		707DDD0924A6C2AE00AB02FB /* pickup.json in Resources */ = {isa = PBXBuildFile; fileRef = 707DDD0724A6C2AD00AB02FB /* pickup.json */; };
-		707DDD0A24A6C2AE00AB02FB /* delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 707DDD0824A6C2AE00AB02FB /* delivery.json */; };
+		7072D5CA24A7AEC900A852C2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072D5C924A7AEC900A852C2 /* SecondViewController.swift */; };
+		7072D5CF24A7B16E00A852C2 /* food2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5CB24A7B16E00A852C2 /* food2.json */; };
+		7072D5D124A7B16E00A852C2 /* gears.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5CD24A7B16E00A852C2 /* gears.json */; };
+		7072D5D424A7B28D00A852C2 /* restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5D324A7B28D00A852C2 /* restaurant.json */; };
+		7072D5D624A7B3B600A852C2 /* viewFood.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5D524A7B3B600A852C2 /* viewFood.json */; };
+		7072D5D824A7B55C00A852C2 /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5D724A7B55C00A852C2 /* camera.json */; };
+		7072D5DA24A7B62700A852C2 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5D924A7B62700A852C2 /* welcome.json */; };
+		7072D5DC24A7B67100A852C2 /* welcome2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5DB24A7B67100A852C2 /* welcome2.json */; };
+		7072D5DF24A7B6F800A852C2 /* getStarted1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5DD24A7B6F700A852C2 /* getStarted1.json */; };
+		7072D5E024A7B6F800A852C2 /* getStarted2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5DE24A7B6F800A852C2 /* getStarted2.json */; };
+		7085B8FB24A6D56700035AA4 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = 7085B8FA24A6D56700035AA4 /* food.json */; };
 		70C0E2FE24A6AFA2007EE16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E2FD24A6AFA2007EE16C /* AppDelegate.swift */; };
 		70C0E30024A6AFA2007EE16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E2FF24A6AFA2007EE16C /* SceneDelegate.swift */; };
 		70C0E30224A6AFA2007EE16C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E30124A6AFA2007EE16C /* OnboardingViewController.swift */; };
@@ -20,8 +29,17 @@
 
 /* Begin PBXFileReference section */
 		6607935BC873EBEBA4CC8D18 /* Pods_ios_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		707DDD0724A6C2AD00AB02FB /* pickup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pickup.json; sourceTree = "<group>"; };
-		707DDD0824A6C2AE00AB02FB /* delivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = delivery.json; sourceTree = "<group>"; };
+		7072D5C924A7AEC900A852C2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7072D5CB24A7B16E00A852C2 /* food2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food2.json; sourceTree = "<group>"; };
+		7072D5CD24A7B16E00A852C2 /* gears.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gears.json; sourceTree = "<group>"; };
+		7072D5D324A7B28D00A852C2 /* restaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurant.json; sourceTree = "<group>"; };
+		7072D5D524A7B3B600A852C2 /* viewFood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viewFood.json; sourceTree = "<group>"; };
+		7072D5D724A7B55C00A852C2 /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
+		7072D5D924A7B62700A852C2 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
+		7072D5DB24A7B67100A852C2 /* welcome2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome2.json; sourceTree = "<group>"; };
+		7072D5DD24A7B6F700A852C2 /* getStarted1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted1.json; sourceTree = "<group>"; };
+		7072D5DE24A7B6F800A852C2 /* getStarted2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted2.json; sourceTree = "<group>"; };
+		7085B8FA24A6D56700035AA4 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
 		70C0E2FA24A6AFA2007EE16C /* ios-onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-onboarding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C0E2FD24A6AFA2007EE16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70C0E2FF24A6AFA2007EE16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,8 +67,16 @@
 		707DDD0224A6BEDE00AB02FB /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				707DDD0824A6C2AE00AB02FB /* delivery.json */,
-				707DDD0724A6C2AD00AB02FB /* pickup.json */,
+				7085B8FA24A6D56700035AA4 /* food.json */,
+				7072D5D924A7B62700A852C2 /* welcome.json */,
+				7072D5DB24A7B67100A852C2 /* welcome2.json */,
+				7072D5DD24A7B6F700A852C2 /* getStarted1.json */,
+				7072D5DE24A7B6F800A852C2 /* getStarted2.json */,
+				7072D5D724A7B55C00A852C2 /* camera.json */,
+				7072D5D324A7B28D00A852C2 /* restaurant.json */,
+				7072D5CD24A7B16E00A852C2 /* gears.json */,
+				7072D5D524A7B3B600A852C2 /* viewFood.json */,
+				7072D5CB24A7B16E00A852C2 /* food2.json */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -80,6 +106,7 @@
 				70C0E2FD24A6AFA2007EE16C /* AppDelegate.swift */,
 				70C0E2FF24A6AFA2007EE16C /* SceneDelegate.swift */,
 				70C0E30124A6AFA2007EE16C /* OnboardingViewController.swift */,
+				7072D5C924A7AEC900A852C2 /* SecondViewController.swift */,
 				70C0E30324A6AFA2007EE16C /* Main.storyboard */,
 				70C0E30624A6AFA3007EE16C /* Assets.xcassets */,
 				70C0E30824A6AFA3007EE16C /* LaunchScreen.storyboard */,
@@ -165,11 +192,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707DDD0A24A6C2AE00AB02FB /* delivery.json in Resources */,
+				7072D5E024A7B6F800A852C2 /* getStarted2.json in Resources */,
+				7072D5CF24A7B16E00A852C2 /* food2.json in Resources */,
+				7072D5D124A7B16E00A852C2 /* gears.json in Resources */,
 				70C0E30A24A6AFA3007EE16C /* LaunchScreen.storyboard in Resources */,
+				7072D5D824A7B55C00A852C2 /* camera.json in Resources */,
+				7072D5DF24A7B6F800A852C2 /* getStarted1.json in Resources */,
+				7072D5DA24A7B62700A852C2 /* welcome.json in Resources */,
 				70C0E30724A6AFA3007EE16C /* Assets.xcassets in Resources */,
+				7072D5D424A7B28D00A852C2 /* restaurant.json in Resources */,
+				7085B8FB24A6D56700035AA4 /* food.json in Resources */,
+				7072D5D624A7B3B600A852C2 /* viewFood.json in Resources */,
 				70C0E30524A6AFA2007EE16C /* Main.storyboard in Resources */,
-				707DDD0924A6C2AE00AB02FB /* pickup.json in Resources */,
+				7072D5DC24A7B67100A852C2 /* welcome2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7072D5CA24A7AEC900A852C2 /* SecondViewController.swift in Sources */,
 				70C0E30224A6AFA2007EE16C /* OnboardingViewController.swift in Sources */,
 				70C0E2FE24A6AFA2007EE16C /* AppDelegate.swift in Sources */,
 				70C0E30024A6AFA2007EE16C /* SceneDelegate.swift in Sources */,

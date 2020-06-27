@@ -17,13 +17,17 @@ struct Slide {
     let buttonTitle : String
     
     static let collection: [Slide] = [
-        .init(title: "Get your favourite food delivered to you in under 30 minutes anytime", animationName: "delivery", buttonColor: .systemYellow, buttonTitle: "Next"),
+        .init(title: "Welcome to Space", animationName: "welcome2", buttonColor: .systemYellow, buttonTitle: "Start"),
         
-        .init(title: "WE serve only from choiced restaurants in your area", animationName: "pickup", buttonColor: .systemGreen, buttonTitle: "Order Now"),
+        .init(title: "Select a restaurant from our map", animationName: "restaurant", buttonColor: .red, buttonTitle: "Next"),
         
-        .init(title: "WE serve only from choiced restaurants in your area", animationName: "delivery", buttonColor: .systemGreen, buttonTitle: "Order Now"),
+        .init(title: "Choose what food you would like from the menu", animationName: "food2", buttonColor: .systemGreen, buttonTitle: "Next"),
         
-        .init(title: "WE serve only from choiced restaurants in your area", animationName: "pickup", buttonColor: .systemGreen, buttonTitle: "Order Now")
+        .init(title: "View the food in High Quality Augmented Reality", animationName: "viewFood", buttonColor: .systemGreen, buttonTitle: "Next"),
+        
+        .init(title: "Please enable your camera", animationName: "camera", buttonColor: .systemGreen, buttonTitle: "Enable Camera"),
+        
+        .init(title: "Lets get started", animationName: "getStarted2", buttonColor: .systemGreen, buttonTitle: "Get Started")
     ]
 }
 
@@ -122,12 +126,7 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-    
-    
-    
 }
-
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
@@ -135,12 +134,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
 
-    
-    
-    
     var actionButtonDidTap: (() -> Void)?
-    
-    
     
     func configure(with slide: Slide){
         titleLabel.text = slide.title
@@ -155,15 +149,12 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         if !animationView.isAnimationPlaying{
             animationView.play()
         }
-        
     }
     
     
     @IBAction func actionButtonTapped(){
         
         actionButtonDidTap?()
-        
     }
-    
 }
 
