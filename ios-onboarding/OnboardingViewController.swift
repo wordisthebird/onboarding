@@ -17,17 +17,17 @@ struct Slide {
     let buttonTitle : String
     
     static let collection: [Slide] = [
-        .init(title: "Welcome to Space", animationName: "welcome2", buttonColor: .systemYellow, buttonTitle: "Start"),
+        .init(title: "Welcome to Space", animationName: "boom", buttonColor: .systemGreen, buttonTitle: "Start"),
         
-        .init(title: "Select a restaurant from our map", animationName: "restaurant", buttonColor: .red, buttonTitle: "Next"),
+        .init(title: "1. Select a restaurant from our map", animationName: "map", buttonColor: .orange, buttonTitle: "Next"),
         
-        .init(title: "Choose what food you would like from the menu", animationName: "food2", buttonColor: .systemGreen, buttonTitle: "Next"),
+        .init(title: "2. Choose what food you would like from the menu", animationName: "food2", buttonColor: .systemPurple, buttonTitle: "Next"),
         
-        .init(title: "View the food in High Quality Augmented Reality", animationName: "viewFood", buttonColor: .systemGreen, buttonTitle: "Next"),
+        .init(title: "3. View the food in High Quality Augmented Reality", animationName: "viewFood", buttonColor: .systemIndigo, buttonTitle: "Next"),
         
-        .init(title: "Please enable your camera", animationName: "camera", buttonColor: .systemGreen, buttonTitle: "Enable Camera"),
+        .init(title: "Please enable your camera", animationName: "camera4", buttonColor: .systemTeal, buttonTitle: "Enable Camera"),
         
-        .init(title: "Lets get started", animationName: "getStarted2", buttonColor: .systemGreen, buttonTitle: "Get Started")
+        .init(title: "Lets get started!", animationName: "getStarted2", buttonColor: .systemGreen, buttonTitle: "Get Started")
     ]
 }
 
@@ -61,6 +61,8 @@ class OnboardingViewController: UIViewController {
         collectionView.delegate = self
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
+        
+        
     }
     
     private func handleActionButtonTap(at indexPath: IndexPath){
@@ -131,7 +133,10 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var animationView: AnimationView!
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var actionButton: UIButton!
 
     var actionButtonDidTap: (() -> Void)?
