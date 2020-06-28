@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import AVKit
 
 struct Slide {
     let title : String
@@ -21,9 +22,9 @@ struct Slide {
         
         .init(title: "1. Select a restaurant from our map", animationName: "map", buttonColor: .orange, buttonTitle: "Next"),
         
-        .init(title: "2. Choose what food you would like from the menu", animationName: "food2", buttonColor: .systemPurple, buttonTitle: "Next"),
+        .init(title: "2. Choose something from the menu", animationName: "food2", buttonColor: .systemPurple, buttonTitle: "Next"),
         
-        .init(title: "3. View the food in High Quality Augmented Reality", animationName: "viewFood", buttonColor: .systemIndigo, buttonTitle: "Next"),
+        .init(title: "3. View the food with AR", animationName: "viewFood", buttonColor: .systemIndigo, buttonTitle: "Next"),
         
         .init(title: "Please enable your camera", animationName: "camera4", buttonColor: .systemTeal, buttonTitle: "Enable Camera"),
         
@@ -53,7 +54,6 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupCollectionView(){
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         collectionView.collectionViewLayout = layout
@@ -61,8 +61,6 @@ class OnboardingViewController: UIViewController {
         collectionView.delegate = self
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
-        
-        
     }
     
     private func handleActionButtonTap(at indexPath: IndexPath){
@@ -113,6 +111,21 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
         
         cell.actionButtonDidTap = { [weak self] in
             self?.handleActionButtonTap(at: indexPath)
+                        
+            if indexPath.row == 4{
+                //enable to camera settings
+                
+                print("Boom")
+                
+                
+                AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
+                      if granted == true {
+                          // User granted
+                      } else {
+                          // User rejected
+                      }
+                  })
+            }
         }
         
         return cell
@@ -138,7 +151,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var actionButton: UIButton!
-
+    
     var actionButtonDidTap: (() -> Void)?
     
     func configure(with slide: Slide){
@@ -162,4 +175,6 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         actionButtonDidTap?()
     }
 }
+
+
 

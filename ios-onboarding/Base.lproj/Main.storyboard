@@ -60,7 +60,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="hJg-UD-mty" secondAttribute="trailing" constant="36" id="6Cg-9c-Pan"/>
+                                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hJg-UD-mty" secondAttribute="trailing" constant="36" id="6Cg-9c-Pan"/>
                                                                 <constraint firstItem="hJg-UD-mty" firstAttribute="top" secondItem="RHF-sD-UPz" secondAttribute="top" constant="24" id="97W-mp-RsM"/>
                                                                 <constraint firstItem="hJg-UD-mty" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RHF-sD-UPz" secondAttribute="leading" constant="36" id="QWy-xK-T4E"/>
                                                                 <constraint firstAttribute="bottom" secondItem="hJg-UD-mty" secondAttribute="bottom" constant="24" id="bwT-YP-Aa0"/>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkO-Nr-zkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="115"/>
+            <point key="canvasLocation" x="899" y="115"/>
         </scene>
     </scenes>
 </document>
