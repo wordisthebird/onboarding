@@ -18,7 +18,7 @@ struct Slide {
     let buttonTitle : String
     
     static let collection: [Slide] = [
-        .init(title: "Welcome to Space", animationName: "boom", buttonColor: .systemGreen, buttonTitle: "Start"),
+        .init(title: "Welcome to Space", animationName: "map", buttonColor: .systemGreen, buttonTitle: "Start"),
         
         .init(title: "1. Select a restaurant from our map", animationName: "map", buttonColor: .orange, buttonTitle: "Next"),
         
@@ -36,21 +36,29 @@ class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var pageControl: UIPageControl!
+    //@IBOutlet weak var pageControl: UIPageControl!
     
     private let slides: [Slide] = Slide.collection
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imageName = "logo.png"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+
+        imageView.frame.size.height = 40
+        imageView.frame.size.width = 40
+        
+        imageView.frame.origin.y = 40.0 // 20 down from the top
+        imageView.frame.origin.x = (self.view.bounds.size.width - imageView.frame.size.width) / 2.0 // centered left to right.
+        
+        view.addSubview(imageView)
+        
+        view.addSubview(imageView);
+
         setupCollectionView()
-        setupPageControl()
-    }
-    
-    private func setupPageControl(){
-        pageControl.numberOfPages = slides.count
-        let angle = CGFloat.pi/2
-        pageControl.transform = CGAffineTransform(rotationAngle: angle)
+        //setupPageControl()
     }
     
     private func setupCollectionView(){
@@ -71,7 +79,7 @@ class OnboardingViewController: UIViewController {
             let nextItem = indexPath.item + 1
             let nextIndexPath = IndexPath(item: nextItem, section: 0)
             collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
-            pageControl.currentPage = nextItem
+            //pageControl.currentPage = nextItem
         }
     }
     
@@ -92,8 +100,8 @@ class OnboardingViewController: UIViewController {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
-        pageControl.currentPage = index
+        //let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
+        //pageControl.currentPage = index
     }
     
 }
@@ -144,6 +152,8 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
 }
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
+    
+    
     
     @IBOutlet weak var animationView: AnimationView!
     
