@@ -10,10 +10,8 @@
 		7072D5CA24A7AEC900A852C2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072D5C924A7AEC900A852C2 /* SecondViewController.swift */; };
 		7072D5CF24A7B16E00A852C2 /* food2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5CB24A7B16E00A852C2 /* food2.json */; };
 		7072D5D124A7B16E00A852C2 /* gears.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5CD24A7B16E00A852C2 /* gears.json */; };
-		7072D5D624A7B3B600A852C2 /* viewFood.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5D524A7B3B600A852C2 /* viewFood.json */; };
 		7072D5E024A7B6F800A852C2 /* getStarted2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D5DE24A7B6F800A852C2 /* getStarted2.json */; };
 		708021EC24A9263A00EAFD5B /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 708021EB24A9263A00EAFD5B /* map.json */; };
-		708021F024A9281C00EAFD5B /* camera4.json in Resources */ = {isa = PBXBuildFile; fileRef = 708021EF24A9281B00EAFD5B /* camera4.json */; };
 		70C0E2FE24A6AFA2007EE16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E2FD24A6AFA2007EE16C /* AppDelegate.swift */; };
 		70C0E30024A6AFA2007EE16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E2FF24A6AFA2007EE16C /* SceneDelegate.swift */; };
 		70C0E30224A6AFA2007EE16C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0E30124A6AFA2007EE16C /* OnboardingViewController.swift */; };
@@ -22,7 +20,6 @@
 		70C0E30A24A6AFA3007EE16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C0E30824A6AFA3007EE16C /* LaunchScreen.storyboard */; };
 		70FC4BF224AA82AC0003A311 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4BF124AA82AC0003A311 /* logo.png */; };
 		70FC4BF824AA92810003A311 /* chef.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4BF724AA92810003A311 /* chef.json */; };
-		70FC4BFE24AA966B0003A311 /* welcome1.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4BFD24AA966B0003A311 /* welcome1.json */; };
 		70FC4C0024AA98110003A311 /* rocket2.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4BFF24AA98100003A311 /* rocket2.json */; };
 		70FC4C0224AA98700003A311 /* camera11.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4C0124AA98700003A311 /* camera11.json */; };
 		83B0DE9797708ECB50F56971 /* Pods_ios_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607935BC873EBEBA4CC8D18 /* Pods_ios_onboarding.framework */; };
@@ -33,10 +30,8 @@
 		7072D5C924A7AEC900A852C2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7072D5CB24A7B16E00A852C2 /* food2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food2.json; sourceTree = "<group>"; };
 		7072D5CD24A7B16E00A852C2 /* gears.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gears.json; sourceTree = "<group>"; };
-		7072D5D524A7B3B600A852C2 /* viewFood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viewFood.json; sourceTree = "<group>"; };
 		7072D5DE24A7B6F800A852C2 /* getStarted2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted2.json; sourceTree = "<group>"; };
 		708021EB24A9263A00EAFD5B /* map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
-		708021EF24A9281B00EAFD5B /* camera4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera4.json; sourceTree = "<group>"; };
 		70C0E2FA24A6AFA2007EE16C /* ios-onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-onboarding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C0E2FD24A6AFA2007EE16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70C0E2FF24A6AFA2007EE16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +42,6 @@
 		70C0E30B24A6AFA3007EE16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FC4BF124AA82AC0003A311 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		70FC4BF724AA92810003A311 /* chef.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chef.json; sourceTree = "<group>"; };
-		70FC4BFD24AA966B0003A311 /* welcome1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome1.json; sourceTree = "<group>"; };
 		70FC4BFF24AA98100003A311 /* rocket2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rocket2.json; sourceTree = "<group>"; };
 		70FC4C0124AA98700003A311 /* camera11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera11.json; sourceTree = "<group>"; };
 		8A8BA9C38CB917A1D107DD0E /* Pods-ios-onboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-onboarding.debug.xcconfig"; path = "Target Support Files/Pods-ios-onboarding/Pods-ios-onboarding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,15 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				708021EB24A9263A00EAFD5B /* map.json */,
-				708021EF24A9281B00EAFD5B /* camera4.json */,
 				70FC4BF124AA82AC0003A311 /* logo.png */,
 				70FC4BF724AA92810003A311 /* chef.json */,
 				7072D5DE24A7B6F800A852C2 /* getStarted2.json */,
-				70FC4BFD24AA966B0003A311 /* welcome1.json */,
 				70FC4C0124AA98700003A311 /* camera11.json */,
 				70FC4BFF24AA98100003A311 /* rocket2.json */,
 				7072D5CD24A7B16E00A852C2 /* gears.json */,
-				7072D5D524A7B3B600A852C2 /* viewFood.json */,
 				7072D5CB24A7B16E00A852C2 /* food2.json */,
 			);
 			path = assets;
@@ -201,12 +192,9 @@
 				70FC4BF824AA92810003A311 /* chef.json in Resources */,
 				7072D5D124A7B16E00A852C2 /* gears.json in Resources */,
 				70C0E30A24A6AFA3007EE16C /* LaunchScreen.storyboard in Resources */,
-				70FC4BFE24AA966B0003A311 /* welcome1.json in Resources */,
 				70C0E30724A6AFA3007EE16C /* Assets.xcassets in Resources */,
 				70FC4C0024AA98110003A311 /* rocket2.json in Resources */,
-				708021F024A9281C00EAFD5B /* camera4.json in Resources */,
 				70FC4C0224AA98700003A311 /* camera11.json in Resources */,
-				7072D5D624A7B3B600A852C2 /* viewFood.json in Resources */,
 				70C0E30524A6AFA2007EE16C /* Main.storyboard in Resources */,
 				70FC4BF224AA82AC0003A311 /* logo.png in Resources */,
 			);

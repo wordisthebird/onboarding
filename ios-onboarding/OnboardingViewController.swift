@@ -35,9 +35,7 @@ struct Slide {
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    //@IBOutlet weak var pageControl: UIPageControl!
-    
+        
     private let slides: [Slide] = Slide.collection
     
     override func viewDidLoad() {
@@ -58,7 +56,6 @@ class OnboardingViewController: UIViewController {
         view.addSubview(imageView);
 
         setupCollectionView()
-        //setupPageControl()
     }
     
     private func setupCollectionView(){
@@ -79,7 +76,6 @@ class OnboardingViewController: UIViewController {
             let nextItem = indexPath.item + 1
             let nextIndexPath = IndexPath(item: nextItem, section: 0)
             collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
-            //pageControl.currentPage = nextItem
         }
     }
     
@@ -98,12 +94,6 @@ class OnboardingViewController: UIViewController {
                               completion: nil)
         }
     }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        //let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
-        //pageControl.currentPage = index
-    }
-    
 }
 
 extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
