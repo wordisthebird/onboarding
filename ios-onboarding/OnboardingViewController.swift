@@ -18,15 +18,15 @@ struct Slide {
     let buttonTitle : String
     
     static let collection: [Slide] = [
-        .init(title: "Welcome to Space", animationName: "map", buttonColor: .systemGreen, buttonTitle: "Start"),
+        .init(title: "Welcome to Space!", animationName: "rocket2",  buttonColor: .systemGreen, buttonTitle: "Start"),
         
-        .init(title: "1. Select a restaurant from our map", animationName: "map", buttonColor: .orange, buttonTitle: "Next"),
+        .init(title: "Choose a Restaurant", animationName: "map", buttonColor: .orange, buttonTitle: "Next"),
         
-        .init(title: "2. Choose something from the menu", animationName: "food2", buttonColor: .systemPurple, buttonTitle: "Next"),
+        .init(title: "Pick some food", animationName: "food2", buttonColor: .systemPurple, buttonTitle: "Next"),
         
-        .init(title: "3. View the food with AR", animationName: "viewFood", buttonColor: .systemIndigo, buttonTitle: "Next"),
+        .init(title: "View the food in AR", animationName: "chef", buttonColor: .systemIndigo, buttonTitle: "Next"),
         
-        .init(title: "Please enable your camera", animationName: "camera4", buttonColor: .systemTeal, buttonTitle: "Enable Camera"),
+        .init(title: "Please enable your camera", animationName: "camera11", buttonColor: .systemTeal, buttonTitle: "Enable Camera"),
         
         .init(title: "Lets get started!", animationName: "getStarted2", buttonColor: .systemGreen, buttonTitle: "Get Started")
     ]
@@ -50,7 +50,7 @@ class OnboardingViewController: UIViewController {
         imageView.frame.size.height = 40
         imageView.frame.size.width = 40
         
-        imageView.frame.origin.y = 40.0 // 20 down from the top
+        imageView.frame.origin.y = 60.0 // 20 down from the top
         imageView.frame.origin.x = (self.view.bounds.size.width - imageView.frame.size.width) / 2.0 // centered left to right.
         
         view.addSubview(imageView)
@@ -159,12 +159,17 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var titleLabel: UILabel!
-    
+
+    @IBOutlet weak var descLabel: UILabel!
+
     @IBOutlet weak var actionButton: UIButton!
+    
+    
     
     var actionButtonDidTap: (() -> Void)?
     
     func configure(with slide: Slide){
+        
         titleLabel.text = slide.title
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)

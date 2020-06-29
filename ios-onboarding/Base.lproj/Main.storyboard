@@ -34,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-jI-aNL">
-                                                    <rect key="frame" x="0.0" y="114" width="395" height="579"/>
+                                                    <rect key="frame" x="0.0" y="78" width="395" height="651"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B34-Hj-eYW" customClass="AnimationView" customModule="Lottie">
                                                             <rect key="frame" x="0.0" y="0.0" width="395" height="395"/>
@@ -44,11 +44,11 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHF-sD-UPz">
-                                                            <rect key="frame" x="0.0" y="395" width="395" height="128"/>
+                                                            <rect key="frame" x="0.0" y="395" width="395" height="200"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJg-UD-mty">
-                                                                    <rect key="frame" x="36" y="24" width="323" height="80"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                                    <rect key="frame" x="36" y="24" width="323" height="152"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -58,11 +58,12 @@
                                                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hJg-UD-mty" secondAttribute="trailing" constant="36" id="6Cg-9c-Pan"/>
                                                                 <constraint firstItem="hJg-UD-mty" firstAttribute="top" secondItem="RHF-sD-UPz" secondAttribute="top" constant="24" id="97W-mp-RsM"/>
                                                                 <constraint firstItem="hJg-UD-mty" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RHF-sD-UPz" secondAttribute="leading" constant="36" id="QWy-xK-T4E"/>
+                                                                <constraint firstAttribute="height" constant="200" id="XSE-dp-LRf"/>
                                                                 <constraint firstAttribute="bottom" secondItem="hJg-UD-mty" secondAttribute="bottom" constant="24" id="bwT-YP-Aa0"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-BV-tsl">
-                                                            <rect key="frame" x="0.0" y="523" width="395" height="56"/>
+                                                            <rect key="frame" x="0.0" y="595" width="395" height="56"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19I-Jh-CrZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="56"/>
