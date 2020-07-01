@@ -10,9 +10,26 @@ import UIKit
 import Lottie
 
 class SecondViewController: UIViewController {
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+           
+           if Core.shared.isNewUser(){
+               //show onboarding
+               let vc = storyboard?.instantiateViewController(identifier: "onboardingVC") as! OnboardingViewController
+               
+               vc.modalPresentationStyle = .fullScreen
+               present(vc, animated: true)
+               
+           }
+           else{
+               //show main VC
+            print("SEX")
+           }
+       }
 }
 

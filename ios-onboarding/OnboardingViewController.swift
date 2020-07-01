@@ -45,10 +45,10 @@ class OnboardingViewController: UIViewController {
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
 
-        imageView.frame.size.height = 40
-        imageView.frame.size.width = 40
+        imageView.frame.size.height = 30
+        imageView.frame.size.width = 30
         
-        imageView.frame.origin.y = 60.0 // 20 down from the top
+        imageView.frame.origin.y = 40.0 // 40 down from the top
         imageView.frame.origin.x = (self.view.bounds.size.width - imageView.frame.size.width) / 2.0 // centered left to right.
         
         view.addSubview(imageView)
@@ -80,7 +80,15 @@ class OnboardingViewController: UIViewController {
     }
     
     private func showMainApp(){
+        
+        
         let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
+        
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set(true, forKey: "onboardingComplete")
+        
+        userDefaults.synchronize()
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
             let sceneDelegate = windowScene.delegate as? SceneDelegate,
@@ -93,6 +101,12 @@ class OnboardingViewController: UIViewController {
                               animations: nil,
                               completion: nil)
         }
+        
+        Core.shared.notNewUser()
+        
+        dismiss(animated: true, completion: nil)
+        
+        
     }
 }
 
@@ -178,6 +192,19 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBAction func actionButtonTapped(){
         
         actionButtonDidTap?()
+    }
+}
+
+class Core{
+    
+    static let shared = Core()
+    
+    func isNewUser() -> Bool{
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    
+    func notNewUser(){
+        UserDefaults.standard.set(true, forKey: "isNewUser")
     }
 }
 
