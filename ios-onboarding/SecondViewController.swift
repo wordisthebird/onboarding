@@ -18,18 +18,18 @@ class SecondViewController: UIViewController {
     override func viewDidLayoutSubviews() {
            super.viewDidLayoutSubviews()
            
-           if Core.shared.isNewUser(){
+           /*if Core.shared.isNewUser(){
                //show onboarding
                let vc = storyboard?.instantiateViewController(identifier: "onboardingVC") as! OnboardingViewController
                
                vc.modalPresentationStyle = .fullScreen
                present(vc, animated: true)
                
-           }
-           else{
-               //show main VC
-            print("SEX")
-           }
+           }*/
        }
+    
+    
+    
+   
 }
 

@@ -35,7 +35,7 @@ struct Slide {
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-        
+    
     private let slides: [Slide] = Slide.collection
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class OnboardingViewController: UIViewController {
         let imageName = "logo.png"
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
-
+        
         imageView.frame.size.height = 30
         imageView.frame.size.width = 30
         
@@ -54,7 +54,7 @@ class OnboardingViewController: UIViewController {
         view.addSubview(imageView)
         
         view.addSubview(imageView);
-
+        
         setupCollectionView()
     }
     
@@ -81,8 +81,7 @@ class OnboardingViewController: UIViewController {
     
     private func showMainApp(){
         
-        
-        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController")
         
         let userDefaults = UserDefaults.standard
         
@@ -95,17 +94,43 @@ class OnboardingViewController: UIViewController {
             let window = sceneDelegate.window{
             
             window.rootViewController = mainAppViewController
+            
             UIView.transition(with: window,
                               duration: 0.25,
                               options: .transitionCrossDissolve,
                               animations: nil,
                               completion: nil)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        Core.shared.notNewUser()
+        if Core.shared.isNewUser(){
+            Core.shared.notNewUser()
+            
+            print("new")
+            
+            //dismiss(animated: true, completion: nil)
+        }
         
-        dismiss(animated: true, completion: nil)
-        
+        else{
+            print("existing")
+            
+             let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController")
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let sceneDelegate = windowScene.delegate as? SceneDelegate,
+                       let window = sceneDelegate.window{
+                       
+                       window.rootViewController = mainAppViewController
+                       
+                       UIView.transition(with: window,
+                                         duration: 0.25,
+                                         options: .transitionCrossDissolve,
+                                         animations: nil,
+                                         completion: nil)
+                   }
+        }
         
     }
 }
@@ -123,7 +148,7 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
         
         cell.actionButtonDidTap = { [weak self] in
             self?.handleActionButtonTap(at: indexPath)
-                        
+            
             if indexPath.row == 4{
                 //enable to camera settings
                 
@@ -131,12 +156,12 @@ extension OnboardingViewController: UICollectionViewDelegate,UICollectionViewDat
                 
                 
                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
-                      if granted == true {
-                          // User granted
-                      } else {
-                          // User rejected
-                      }
-                  })
+                    if granted == true {
+                        // User granted
+                    } else {
+                        // User rejected
+                    }
+                })
             }
         }
         
@@ -163,9 +188,9 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var titleLabel: UILabel!
-
+    
     @IBOutlet weak var descLabel: UILabel!
-
+    
     @IBOutlet weak var actionButton: UIButton!
     
     
